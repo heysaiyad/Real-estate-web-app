@@ -9,9 +9,6 @@ app.use(cookieParser());
 app.use("/api/auth/", authRoute);
 app.use("/api/test/", postRoute);
 
-app.get("/", (req, res)=>{
-    res.send("Hi there")
-})
 app.listen(8800,()=>{
     console.log("Server is running!");
 } )
