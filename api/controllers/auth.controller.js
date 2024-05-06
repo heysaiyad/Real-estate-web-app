@@ -23,7 +23,7 @@ export const register = async(req, res)=>{
       res.status(201).json({ message: "User created successfully" });
     }catch(err){
         console.log(err);
-        res.status(500).json({msg:"Failed to create user"});
+        res.status(500).send("Failed to create user");
     }
     
 }
@@ -36,14 +36,14 @@ export const login = async(req, res)=>{
         where:{username},
     });
     if (!user) {
-        return res.status(401).json({msg:"Invalid Credentials!"});
+        return res.status(401).json({message:"Invalid Credentials!"});
     }
 
     // CHECK IF THE PASSWORD IS CORRECT
     const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (!isPasswordValid) {
-        return res.status(401).json({msg:"Invalid Credentials!"});
+        return res.status(401).json({message:"Invalid Credentials!"});
     }
 
     // GENERATE COOKIE TOKEN AND SEND TO THE USER
@@ -55,13 +55,16 @@ export const login = async(req, res)=>{
         id:user.id
     }, process.env.JWT_SECRET_KEY,{expiresIn:age})
 
+    const {password:userPassword, ...userInfo} = user;
+
     res.cookie("token", token, {
         httpOnly:true,
         // secure:true   -> (production me use karenge qki postman me nhi chalta hai https)
         maxAge:age,
     })
     .status(200)
-    .json({msg:"Login Successful"});
+    // .json({message:"Login Successful"});
+    .json(userInfo);
 
     // res.cookie("test2", "myValue2", {
     //     httpOnly:true,
@@ -71,9 +74,13 @@ export const login = async(req, res)=>{
     // .status(200)
     // .json({msg:"Login Successful"});
     }
+    // catch(err){
+    //     console.log(err);
+    //     res.status(500).json({msg:"Failed to login!"});
+    // }
     catch(err){
         console.log(err);
-        res.status(500).json({msg:"Failed to login!"});
+        res.status(500).send("Failed to login!");
     }
 
 }

@@ -22,6 +22,13 @@ then i install 'npx prisma generate' the run
 install cookie-parser
 also use jwt token
 11. make logout api
+## Client Side
+1. register routes
+2. login routes
+3. in library directory create apirequest.js for base url
+4. register and login are completed(bugs fixed)
+
+ 
 
 
 
