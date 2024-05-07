@@ -27,6 +27,11 @@ also use jwt token
 2. login routes
 3. in library directory create apirequest.js for base url
 4. register and login are completed(bugs fixed)
+5. logout features completed
+6. Authentiaction-> should-be-logged-in, should-be-admin
+7. make a middleware -> verifyToken
+
+
 
  
 
