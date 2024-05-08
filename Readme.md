@@ -1,43 +1,42 @@
-## Real Estate web app
-1. create a directory that is REAL ESTATE WEB APP
-2. crate a directory that is api(back end)
-3. routes-> auth, post, user
-4. controllers -> auth controller ->make register api
-5. install prisma
-6. create database using mongodb
-7. create user model (schema file)
-    - After making any change on prisma.schema, run "npx prisma db push"
-8. create new user and save to db
-    - install prismaClient
-    - make a directory lib->prisma.js then export prisma and use in auth controller file for creare new user
+## Real Estate Web App
+1. Create a directory that is a REAL ESTATE WEB APP.
+2. Create a directory that is an API. (back end)
+3. routes: auth, post, user
+4. controllers -> auth controller -> make register api
+5. Install Prisma
+6. Create a database using MongoDB.
+7. Create a user model (schema file).
+    After making any changes to prisma.schema, run "npx prisma db push."
+8. Create a new user and save it to the database.
+    install prismaClient
+Make a directory lib->prisma.js, then export prisma and use it in the auth controller file to create a new user.
 
-When i hit the register api then some error 
+When I hit the register API, I got some errors.
 PrismaClientValidationError:
 Invalid `prisma.user.create()` invocation:
 
-then i install 'npx prisma generate' the run
-9. npx prisma db push -> any changes in db
+then I install 'npx prisma generate' in the run
+9. npx prisma db push: any changes in db
 
-10. make login api 
+10. Make login API
 install cookie-parser
-also use jwt token
-11. make logout api
+also use a JWT token.
+11. Make a logout API
 ## Client Side
-1. register routes
+1. Register routes.
 2. login routes
-3. in library directory create apirequest.js for base url
-4. register and login are completed(bugs fixed)
-5. logout features completed
-6. Authentiaction-> should-be-logged-in, should-be-admin
-7. make a middleware -> verifyToken
-
-
-
- 
+3. In the library directory, create apirequest.js for the base URL.
+4. Registration and login are completed (bugs fixed).
+5. Logout features completed
+6. Authentiaction: should-be-logged-in, should-be-admin
+7. Make a middleware -> verifyToken
 
 
 
 
 
 
- 
+
+
+
+
