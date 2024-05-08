@@ -30,6 +30,11 @@ also use a JWT token.
 5. Logout features completed
 6. Authentiaction: should-be-logged-in, should-be-admin
 7. Make a middleware -> verifyToken
+8. login nhi hai fir v hm profile page access kar pa rhe hai to react contextapi se ye handle kar skte hai, we can store our user information anywhere, when our needed, just call caontext hook and we can reach that data and also we will create function that we update our user for example username, avatar, immediatlly.
+
+9. When I logged out and went back, it showed an error message. So now I fixed this issue using the context API and navigated to the login page.
+10. Update profile: For an updated profile, I make a file whose file name is profileupdatepage, and then I use the context API to update the username, password, and avatar.
+
 
 
 
