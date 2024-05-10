@@ -35,7 +35,9 @@ also use a JWT token.
 9. When I logged out and went back, it showed an error message. So now I fixed this issue using the context API and navigated to the login page.
 10. Update profile: For an updated profile, I make a file whose file name is profileupdatepage, and then I use the context API to update the username, password, and avatar.
 11. api-> make a route for user -> user update, delete, get user, get users 
-12. client -> 
+12. client -> make ui for above routes
+13. update avatar
+
 
 
 
