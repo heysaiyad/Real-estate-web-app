@@ -37,6 +37,10 @@ also use a JWT token.
 11. api-> make a route for user -> user update, delete, get user, get users 
 12. client -> make ui for above routes
 13. update avatar
+14. update User model and create post, type, property  model
+15. push->using this cmd-> npx prisma db push 
+16. create post router -> get posts, get post, create post, delete post.
+17. create post controller ->  get posts, get post, create post, delete post.
 
 
 
