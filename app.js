@@ -17,9 +17,23 @@ console.log(__dirname);
 dotenv.config();
 
 const app = express();
-// app.use(cors({origin:process.env.CLINET_URL, credentials:true}))
-// app.use(cors({origin:'*', credentials:true}))
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://real-estate-web-app-1cus.onrender.com'
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(cookieParser());
 
@@ -39,8 +53,8 @@ app.get('*', (req, res) => {
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
-  });
+});
 
-app.listen(8800,()=>{
+app.listen(8800, () => {
     console.log("Server is running! on port 8800");
-} )
+});
