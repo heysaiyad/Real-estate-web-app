@@ -19,7 +19,13 @@ dotenv.config();
 const app = express();
 // app.use(cors({origin:process.env.CLINET_URL, credentials:true}))
 // app.use(cors({origin:'*', credentials:true}))
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+// app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({
+    origin: process.env.CLIENT_URL,
+    credentials: true
+}));
+console.log("CLIENT_URL:", process.env.CLIENT_URL);
+
 app.use(express.json());
 app.use(cookieParser());
 
