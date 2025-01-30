@@ -41,6 +41,7 @@ also use a JWT token.
 15. push->using this cmd-> npx prisma db push 
 16. create post router -> get posts, get post, create post, delete post.
 17. create post controller ->  get posts, get post, create post, delete post.
+18. 
 
 
 
