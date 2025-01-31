@@ -7,22 +7,10 @@
 
 // export default apiRequest;
 
-// import axios from "axios";
-
-// const apiRequest = axios.create({
-//     baseURL: "https://real-estate-web-app-1cus.onrender.com/api",
-//     withCredentials: true
-// });
-
-// export default apiRequest;
-
-
 import axios from "axios";
 
 const apiRequest = axios.create({
-    baseURL: process.env.NODE_ENV === "development" 
-        ? process.env.REACT_APP_DEV_API_BASE_URL 
-        : process.env.REACT_APP_PROD_API_BASE_URL,
+    baseURL: "https://real-estate-web-app-1cus.onrender.com/api",
     withCredentials: true
 });
 
