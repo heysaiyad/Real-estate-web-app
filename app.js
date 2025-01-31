@@ -26,7 +26,7 @@ app.use(cookieParser());
 
 // CORS configuration
 const corsOptions = {
-  origin: "https://real-estate-web-app-1cus.onrender.com", // Use the same URL for both frontend and backend
+  origin: "https://real-estate-web-app-1cus.onrender.com", 
   credentials: true, // Allow cookies to be sent
 };
 app.use(cors(corsOptions));
