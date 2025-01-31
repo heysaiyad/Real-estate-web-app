@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import "./login.scss";
-import { Link, json, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import apiRequest from "../../lib/apiRequest";
 import { AuthContext } from "../../context/AuthContext";
 
