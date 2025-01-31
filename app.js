@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -22,6 +23,13 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
+
+// CORS configuration
+const corsOptions = {
+  origin: "https://real-estate-web-app-1cus.onrender.com", // Use the same URL for both frontend and backend
+  credentials: true, // Allow cookies to be sent
+};
+app.use(cors(corsOptions));
 
 // API Routes
 app.use("/api/users", userRoute);
