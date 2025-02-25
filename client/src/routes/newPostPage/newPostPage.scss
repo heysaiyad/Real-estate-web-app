@@ -64,13 +64,26 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; 
+    max-height: 95vh; 
+    overflow-y: auto; 
+    position: relative; 
 
     img {
       width: 50%;
       height: 180px;
       object-fit: cover;
       border-radius: 5px;
+    }
+  
+    .uploadButtonContainer {
+      position: sticky; 
+      bottom: 0; 
+      background-color: #fcf5f3; 
+      width: 100%; 
+      display: flex;
+      justify-content: center; 
+      padding: 10px 0;
     }
   }
 }

@@ -41,7 +41,9 @@ also use a JWT token.
 15. push->using this cmd-> npx prisma db push 
 16. create post router -> get posts, get post, create post, delete post.
 17. create post controller ->  get posts, get post, create post, delete post.
-18. 
+18. format getPost response to include postData and postDetail separately and add schema for postDetail in Prisma
+19. Implemented a new component `newPostPage` for creating posts, integrated React Quill for rich text editing in the post description, added image upload functionality.
+
 
 
 
