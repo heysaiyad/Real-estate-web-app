@@ -11,6 +11,7 @@ import Register from "./routes/register/register";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import {Layout, RequireAuth } from "./routes/layout/layout";
 import NewPostPage from "./routes/newPostPage/newPostPage";
+import { singlePageLoader } from "./lib/loaders";
 
 
 
@@ -30,7 +31,8 @@ function App() {
         },
         {
           path:"/:id",
-          element:<SinglePage/>
+          element:<SinglePage/>,
+          loader: singlePageLoader, 
         },
         
         {
